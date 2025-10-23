@@ -1,0 +1,138 @@
+thanh ghi bắt buộc
+CommandReg        (0x01)  // Quan trọng nhất - điều khiển lệnh
+ComIrqReg         (0x04)  // Kiểm tra trạng thái hoàn thành
+ErrorReg          (0x06)  // Kiểm tra lỗi
+FIFODataReg       (0x09)  // Ghi/đọc dữ liệu
+FIFOLevelReg      (0x0A)  // Biết có bao nhiêu data trong FIFO
+BitFramingReg     (0x0D)  // Cấu hình số bit truyền/nhận
+
+thanh ghi cấu hình
+ModeReg           (0x11)  // Cấu hình tốc độ, mode RF
+TxControlReg      (0x14)  // Bật/tắt antenna
+TModeReg          (0x2A)  // Cấu hình timer
+TPrescalerReg     (0x2B)  // Prescaler cho timer
+TReloadRegH/L     (0x2C,0x2D) // Giá trị đếm timer
+
+Giao tiếp SPI (Serial Peripheral Interface) - nhưng là SPI bit-banging!
+SO SÁNH VỚI SPI CHUẨN:
+SPI Bit-banging (code hiện tại):
+Ưu điểm: Linh hoạt, không cần module SPI hardware
+
+Nhược điểm: Chậm hơn, tốn CPU
+
+Mode: Mode 0 (CPOL=0, CPHA=0) - data captured on rising edge
+
+init
+[BẮT ĐẦU]
+    |
+[Setup I/O PIC] → SDA, SCK, MOSI=OUTPUT, MISO=INPUT
+    |
+[Hardware Reset] → RST=0, delay, RST=1
+    |
+[Soft Reset] → Ghi CommandReg = PCD_RESETPHASE
+    |
+[Chờ Reset xong] → Đọc CommandReg, chờ bit4=0
+    |               (THÊM TIMEOUT)
+    |
+[Cấu hình Timer] → TModeReg, TPrescalerReg, TReloadReg
+    |
+[Cấu hình RF cơ bản] → ModeReg, TxControlReg
+    |
+[BẬT ANTENNA] → TxControlReg |= 0x03
+    |
+[KẾT THÚC]
+
+RFID_CheckCard
+[BẮT ĐẦU]
+    |
+[Clear BitFraming] → BitFramingReg = 0x00
+    |
+[Chuẩn bị lệnh REQA] → buffer[0] = 0x26
+    |
+[Gọi RFID_ToCard] → command=PCD_TRANSCEIVE
+    |               sendData=buffer, sendLen=1
+    |               backData=buffer, backLen=&backBits
+    |
+[Kiểm tra kết quả] → status==0 VÀ backBits==0x10?
+    |-- ĐÚNG: return 1 (CÓ THẺ)
+    |-- SAI: return 0 (KHÔNG CÓ THẺ)
+    |
+[KẾT THÚC]
+
+RFID_ToCard
+[BẮT ĐẦU]
+    |
+[Thiết lập ngắt] → ComIEnReg = 0x77 (cho TRANSCEIVE)
+    |
+[Clear cờ ngắt] → ComIrqReg = 0x7F
+    |
+[Clear FIFO] → FIFOLevelReg = 0x80
+    |
+[Set idle mode] → CommandReg = PCD_IDLE
+    |
+[Ghi dữ liệu vào FIFO] → Ghi sendData vào FIFODataReg
+    |
+[Thực thi lệnh chính] → CommandReg = command (TRANSCEIVE)
+    |
+[Set BitFraming] → BitFramingReg |= 0x80 (start transmission)
+    |
+[VÒNG LẶP CHỜ]
+    |-- Đọc ComIrqReg
+    |-- Kiểm tra: có bit waitIRq (0x30)? → BREAK
+    |-- Kiểm tra: có bit 0x01 (timer)? → BREAK  
+    |-- Timeout 1000ms? → BREAK
+    |
+[Clear BitFraming] → BitFramingReg &= ~0x80
+    |
+[KIỂM TRA LỖI]
+    |-- ErrorReg có lỗi? → status = 1 (LỖI)
+    |-- KHÔNG LỖI:
+        |-- Đọc FIFOLevelReg (số byte nhận được)
+        |-- Đọc ControlReg (số bit thừa)
+        |-- Tính toán tổng số bit nhận được
+        |-- Đọc dữ liệu từ FIFO vào backData
+        |-- status = 0 (THÀNH CÔNG)
+    |
+[return status]
+    |
+[KẾT THÚC]
+
+SPI
+[Ghi Register]
+SDA=0 → Gửi address (7bit + write bit) → Gửi data (8bit) → SDA=1
+
+[Đọc Register]  
+SDA=0 → Gửi address (7bit + read bit) → Đọc data (8bit) → SDA=1
+
+
+
+
+*Các chân kết nối
+-SDA(Serial Data) thực chất là chân CS của SPI
++tác dụng: chọn chip RC522 để giao tiếp
++Hoạt động: Active LOW (0 = chọn, 1 = không chọn)
+-CSK(Serial Clock):
++Tác dụng: Xung nhịp đồng bộ hóa dữ liệu
++Hoạt động: Tạo xung vuông để đọc/ghi bit data
+-MOSI (Master Out Slave In)
++Tác dụng: PIC → RC522
++Truyền: Địa chỉ register, dữ liệu ghi, lệnh
+-MISO (Master In Slave Out)
++Tác dụng: RC522 → PIC
++Nhận: Dữ liệu đọc từ register, phản hồi từ thẻ
+-RST (Reset)
++Tác dụng: Reset cứng RC522
++Hoạt động: Active LOW (0 = reset, 1 = hoạt động)
+
+Chân IRQ(KHÔNG DÙNG VÌ ĐANG DÙNG POLLING đơn giản hóa code) là gì:
+IRQ = Interrupt ReQuest - Ngắt
+Tác dụng: RC522 báo hiệu khi có sự kiện (có thẻ, truyền xong...)
+
+-Ưu điểm của Polling:
+Đơn giản: Không cần setup ngắt phức tạp
+Dễ debug: Theo dõi trạng thái dễ dàng
+Đủ cho ứng dụng đơn giản: Chỉ quét thẻ có/không
+
+-Nhược điểm của Polling:
+Tốn CPU: PIC luôn bận kiểm tra
+Chậm phản ứng: Có thể bỏ lỡ sự kiện nhanh

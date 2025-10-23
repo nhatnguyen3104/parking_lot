@@ -1,0 +1,19 @@
+* Cảm biến hồng ngoại Active LOW
+- trả về giá trị 1 nếu mức 0 (có vật cản)
+- trả về giá trị 0 nếu mức 1 (không có vật cản)
+
+*servo
+Min pulse: 500μs = 0°
+Max pulse: 2500μs = 180°
+Period: 20000μs (50Hz)
+
+-công thức tính góc
+Góc (độ) = (PulseWidth - MIN_PULSE) × (180° / (MAX_PULSE - MIN_PULSE))=((PulseWidth - 500)x180/(250-500))
+=(PulseWidth - 500) × 0.09
+=> servo đóng (0°): (500-500)x0.09 = 0
+=> servo mở (90°): (1500-500)x0.09 = 90
+
+-quá trình mở 
+đưa PORT lên mức 1 delay 1500us sau đó đưa port về mức 0 và delay 18500us để qua trình này tròn 20000us(50hz)
+-quá trình đóng
+đưa PORT lên mức 1 delay 500us sau đó đưa port về mức 0 và delay 19500us để qua trình này tròn 20000us(50hz)
