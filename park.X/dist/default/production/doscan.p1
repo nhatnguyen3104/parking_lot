@@ -1,0 +1,570 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"409 D:\App\mplab\pic\include\c99/bits/alltypes.h
+[; ;D:\App\mplab\pic\include\c99/bits/alltypes.h: 409: typedef struct _IO_FILE FILE;
+[s S1 ]
+[n S1 _IO_FILE ]
+"95 D:\App\mplab\pic\include\c99/stdio.h
+[; ;D:\App\mplab\pic\include\c99/stdio.h: 95: int ungetc(int, FILE *);
+[v _ungetc `(i ~T0 @X0 0 ef2`i`*S1 ]
+"87
+[; ;D:\App\mplab\pic\include\c99/stdio.h: 87: int fgetc(FILE *);
+[v _fgetc `(i ~T0 @X0 0 ef1`*S1 ]
+"44 D:\App\mplab\pic\include\c99/stdlib.h
+[; ;D:\App\mplab\pic\include\c99/stdlib.h: 44: unsigned long __strtoxl(const char * s, char ** endptr, int base, char is_signed);
+[v ___strtoxl `(ul ~T0 @X0 0 ef4`*Cuc`**uc`i`uc ]
+"12 D:\App\mplab\pic\include\c99/errno.h
+[; ;D:\App\mplab\pic\include\c99/errno.h: 12: extern int errno;
+[v _errno `i ~T0 @X0 0 e ]
+"40 D:\App\mplab\pic\include\c99/string.h
+[; ;D:\App\mplab\pic\include\c99/string.h: 40: int strncmp (const char *, const char *, size_t);
+[v _strncmp `(i ~T0 @X0 0 ef3`*Cuc`*Cuc`ui ]
+"14 D:\App\mplab\pic\include\c99/stdarg.h
+[v ___va_arg `(*v ~T0 @X0 0 ev`*v ]
+[p i ___va_arg ]
+"54 D:\App\mplab\pic\sources\c99\common\doscan.c
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 54: static _Bool asup;
+[v _asup `a ~T0 @X0 1 s ]
+"55
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 55: static int width;
+[v _width `i ~T0 @X0 1 s ]
+"58
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 58: static int ncnv, nmatch;
+[v _ncnv `i ~T0 @X0 1 s ]
+[v _nmatch `i ~T0 @X0 1 s ]
+"71
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 71: static char dbuf[32];
+[v _dbuf `uc ~T0 @X0 -> 32 `i s ]
+"74
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 74: static void skipws(FILE *fp)
+[v _skipws `(v ~T0 @X0 1 sf1`*S1 ]
+"75
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 75: {
+{
+[e :U _skipws ]
+"74
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 74: static void skipws(FILE *fp)
+[v _fp `*S1 ~T0 @X0 1 r1 ]
+"75
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 75: {
+[f ]
+"76
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 76:     int c;
+[v _c `i ~T0 @X0 1 a ]
+"78
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 78:     while ((c = fgetc(fp)) != (-1)) {
+[e $U 9  ]
+[e :U 10 ]
+{
+"79
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 79:         if (!(((c == ' ') || ((unsigned char)((c)-'\t') < 5)))) {
+[e $ ! ! || == -> _c `ui -> 32 `ui < -> -> - -> _c `ui -> 9 `ui `uc `i -> 5 `i 12  ]
+{
+"80
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 80:             ungetc(c, fp);
+[e ( _ungetc (2 , _c _fp ]
+"81
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 81:             break;
+[e $U 11  ]
+"82
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 82:         }
+}
+[e :U 12 ]
+"83
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 83:     }
+}
+[e :U 9 ]
+"78
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 78:     while ((c = fgetc(fp)) != (-1)) {
+[e $ != = _c ( _fgetc (1 _fp -U -> 1 `i 10  ]
+[e :U 11 ]
+"84
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 84: }
+[e :UE 8 ]
+}
+"482
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 482: static int atou(FILE *fp, unsigned long long *pll)
+[v _atou `(i ~T0 @X0 1 sf2`*S1`*uo ]
+"483
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 483: {
+{
+[e :U _atou ]
+"482
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 482: static int atou(FILE *fp, unsigned long long *pll)
+[v _fp `*S1 ~T0 @X0 1 r1 ]
+[v _pll `*uo ~T0 @X0 1 r2 ]
+"483
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 483: {
+[f ]
+"484
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 484:     char *ep;
+[v _ep `*uc ~T0 @X0 1 a ]
+"485
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 485:     int c, i, w;
+[v _c `i ~T0 @X0 1 a ]
+[v _i `i ~T0 @X0 1 a ]
+[v _w `i ~T0 @X0 1 a ]
+"488
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 488:     skipws(fp);
+[e ( _skipws (1 _fp ]
+"491
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 491:     w = width ? width : sizeof(dbuf) - 1;
+[e = _w -> ? != _width -> 0 `i : -> _width `ui - -> # _dbuf `ui -> -> 1 `i `ui `i ]
+"492
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 492:     i = 0;
+[e = _i -> 0 `i ]
+"493
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 493:     while ((i < w) && (i < (sizeof(dbuf) - 1))) {
+[e $U 14  ]
+[e :U 15 ]
+{
+"494
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 494:         c = fgetc(fp);
+[e = _c ( _fgetc (1 _fp ]
+"495
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 495:         if (c == (-1) && (width || i==0)) {
+[e $ ! && == _c -U -> 1 `i || != _width -> 0 `i == _i -> 0 `i 17  ]
+{
+"496
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 496:             return c;
+[e ) _c ]
+[e $UE 13  ]
+"497
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 497:         }
+}
+[e :U 17 ]
+"498
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 498:         if (!i && ((c == '+') || (c == '-'))) {
+[e $ ! && ! != _i -> 0 `i || == -> _c `ui -> 43 `ui == -> _c `ui -> 45 `ui 18  ]
+{
+"499
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 499:             dbuf[i] = (char)c;
+[e = *U + &U _dbuf * -> -> _i `ui `ux -> -> # *U &U _dbuf `ui `ux -> _c `uc ]
+"500
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 500:             ++i;
+[e =+ _i -> 1 `i ]
+"501
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 501:             ++nmatch;
+[e =+ _nmatch -> 1 `i ]
+"502
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 502:             continue;
+[e $U 14  ]
+"503
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 503:         }
+}
+[e :U 18 ]
+"504
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 504:         if (!(((unsigned char)((c)-'0')) < 10)) {
+[e $ ! ! < -> -> - -> _c `ui -> 48 `ui `uc `i -> 10 `i 19  ]
+{
+"505
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 505:    if (c != (-1)) {
+[e $ ! != _c -U -> 1 `i 20  ]
+{
+"506
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 506:     ungetc(c, fp);
+[e ( _ungetc (2 , _c _fp ]
+"507
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 507:    }
+}
+[e :U 20 ]
+"508
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 508:             break;
+[e $U 16  ]
+"509
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 509:         }
+}
+[e :U 19 ]
+"510
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 510:         dbuf[i] = (char)c;
+[e = *U + &U _dbuf * -> -> _i `ui `ux -> -> # *U &U _dbuf `ui `ux -> _c `uc ]
+"511
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 511:         ++i;
+[e =+ _i -> 1 `i ]
+"512
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 512:         ++nmatch;
+[e =+ _nmatch -> 1 `i ]
+"513
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 513:     }
+}
+[e :U 14 ]
+"493
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 493:     while ((i < w) && (i < (sizeof(dbuf) - 1))) {
+[e $ && < _i _w < -> _i `ui - -> # _dbuf `ui -> -> 1 `i `ui 15  ]
+[e :U 16 ]
+"514
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 514:     dbuf[i] = '\0';
+[e = *U + &U _dbuf * -> -> _i `ui `ux -> -> # *U &U _dbuf `ui `ux -> -> 0 `ui `uc ]
+"520
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 520:     *pll = __strtoxl(&dbuf[0],&ep,10,0);
+[e = *U _pll -> ( ___strtoxl (4 , , , -> &U *U + &U _dbuf * -> -> -> 0 `i `ui `ux -> -> # *U &U _dbuf `ui `ux `*Cuc &U _ep -> 10 `i -> -> 0 `i `uc `uo ]
+"523
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 523:     return (errno || !i) ? (-1) - 1 : !asup;
+[e ) ? || != _errno -> 0 `i ! != _i -> 0 `i : - -U -> 1 `i -> 1 `i -> ! != -> _asup `i -> 0 `i `i ]
+[e $UE 13  ]
+"524
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 524: }
+[e :UE 13 ]
+}
+"672
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 672: static int vfsfcnvrt(FILE *fp, char *fmt[], va_list ap)
+[v _vfsfcnvrt `(i ~T0 @X0 1 sf3`*S1`**uc`**v ]
+"673
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 673: {
+{
+[e :U _vfsfcnvrt ]
+"672
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 672: static int vfsfcnvrt(FILE *fp, char *fmt[], va_list ap)
+[v _fp `*S1 ~T0 @X0 1 r1 ]
+[v _fmt `**uc ~T0 @X0 1 r2 ]
+[v _ap `**v ~T0 @X0 1 r3 ]
+"673
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 673: {
+[f ]
+"674
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 674:     char *cp, ct[3];
+[v _cp `*uc ~T0 @X0 1 a ]
+[v _ct `uc ~T0 @X0 -> 3 `i a ]
+"675
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 675:     int c, i;
+[v _c `i ~T0 @X0 1 a ]
+[v _i `i ~T0 @X0 1 a ]
+"676
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 676:     long long ll;
+[v _ll `o ~T0 @X0 1 a ]
+"677
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 677:     unsigned long long llu;
+[v _llu `uo ~T0 @X0 1 a ]
+"678
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 678:     long double f;
+[v _f `d ~T0 @X0 1 a ]
+"679
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 679:     void *vp;
+[v _vp `*v ~T0 @X0 1 a ]
+"682
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 682:     if ((*fmt)[0] == '%') {
+[e $ ! == -> *U + *U _fmt * -> -> 0 `i `x -> -> # *U *U _fmt `i `x `ui -> 37 `ui 22  ]
+{
+"683
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 683:         ++*fmt;
+[e =+ *U _fmt * -> -> 1 `i `x -> -> # *U *U _fmt `i `x ]
+"685
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 685:         asup = width = 0;
+[e = _asup -> = _width -> 0 `i `a ]
+"1212
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1212:         if (!strncmp(*fmt, "hhu", ((sizeof("hhu")/sizeof("hhu"[0]))-1))) {
+[e $ ! ! != ( _strncmp (3 , , -> *U _fmt `*Cuc :s 3C - / -> 4 `ui -> # *U + :s 4C * -> -> 0 `i `x -> -> # *U :s 4C `i `x `ui -> -> 1 `i `ui -> 0 `i 23  ]
+{
+"1214
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1214:             *fmt += ((sizeof("hhu")/sizeof("hhu"[0]))-1);
+[e =+ *U _fmt * -> - / -> 4 `ui -> # *U + :s 5C * -> -> 0 `i `x -> -> # *U :s 5C `i `x `ui -> -> 1 `i `ui `ux -> -> # *U *U _fmt `ui `ux ]
+"1215
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1215:             i = atou(fp, &llu);
+[e = _i ( _atou (2 , _fp &U _llu ]
+"1216
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1216:             if (!(i < 1)) {
+[e $ ! ! < _i -> 1 `i 24  ]
+{
+"1217
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1217:                 vp = (void *)(*(unsigned char * *)__va_arg(*(unsigned char * **)ap, (unsigned char *)0));
+[e = _vp -> *U -> ( ___va_arg , (. -> *U -> _ap `***uc `*v -> -> 0 `i `*uc `**uc `*v ]
+"1218
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1218:                 *(unsigned char *)vp = (unsigned char)llu;
+[e = *U -> _vp `*uc -> _llu `uc ]
+"1219
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1219:             }
+}
+[e :U 24 ]
+"1220
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1220:             return i;
+[e ) _i ]
+[e $UE 21  ]
+"1221
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1221:         }
+}
+[e :U 23 ]
+"1239
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1239:         if (*fmt[0] == 'u') {
+[e $ ! == -> *U *U + _fmt * -> -> 0 `i `x -> -> # *U _fmt `i `x `ui -> 117 `ui 25  ]
+{
+"1241
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1241:             ++*fmt;
+[e =+ *U _fmt * -> -> 1 `i `x -> -> # *U *U _fmt `i `x ]
+"1242
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1242:             i = atou(fp, &llu);
+[e = _i ( _atou (2 , _fp &U _llu ]
+"1243
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1243:             if (!(i < 1)) {
+[e $ ! ! < _i -> 1 `i 26  ]
+{
+"1244
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1244:                 vp = (void *)(*(unsigned int * *)__va_arg(*(unsigned int * **)ap, (unsigned int *)0));
+[e = _vp -> *U -> ( ___va_arg , (. -> *U -> _ap `***ui `*v -> -> 0 `i `*ui `**ui `*v ]
+"1245
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1245:                 *(unsigned int *)vp = (unsigned int)llu;
+[e = *U -> _vp `*ui -> _llu `ui ]
+"1246
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1246:             }
+}
+[e :U 26 ]
+"1247
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1247:             return i;
+[e ) _i ]
+[e $UE 21  ]
+"1248
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1248:         }
+}
+[e :U 25 ]
+"1448
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1448:         if ((*fmt)[0] == '%') {
+[e $ ! == -> *U + *U _fmt * -> -> 0 `i `x -> -> # *U *U _fmt `i `x `ui -> 37 `ui 27  ]
+{
+"1449
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1449:    skipws(fp);
+[e ( _skipws (1 _fp ]
+"1450
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1450:    c = fgetc(fp);
+[e = _c ( _fgetc (1 _fp ]
+"1451
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1451:    if (c == '%') {
+[e $ ! == -> _c `ui -> 37 `ui 28  ]
+{
+"1452
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1452:     ++*fmt;
+[e =+ *U _fmt * -> -> 1 `i `x -> -> # *U *U _fmt `i `x ]
+"1453
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1453:     ++nmatch;
+[e =+ _nmatch -> 1 `i ]
+"1454
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1454:     return 0;
+[e ) -> 0 `i ]
+[e $UE 21  ]
+"1455
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1455:    }
+}
+[e $U 29  ]
+"1456
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1456:    else if (c != (-1)) {
+[e :U 28 ]
+[e $ ! != _c -U -> 1 `i 30  ]
+{
+"1457
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1457:     ungetc(c, fp);
+[e ( _ungetc (2 , _c _fp ]
+"1458
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1458:    }
+}
+[e :U 30 ]
+[e :U 29 ]
+"1459
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1459:    return (-1) - 1;
+[e ) - -U -> 1 `i -> 1 `i ]
+[e $UE 21  ]
+"1460
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1460:         }
+}
+[e :U 27 ]
+"1463
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1463:         ++*fmt;
+[e =+ *U _fmt * -> -> 1 `i `x -> -> # *U *U _fmt `i `x ]
+"1464
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1464:         return 0;
+[e ) -> 0 `i ]
+[e $UE 21  ]
+"1465
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1465:     }
+}
+[e :U 22 ]
+"1468
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1468:     c = fgetc(fp);
+[e = _c ( _fgetc (1 _fp ]
+"1469
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1469:  if ((((*fmt[0] == ' ') || ((unsigned char)((*fmt[0])-'\t') < 5)))) {
+[e $ ! || == -> *U *U + _fmt * -> -> 0 `i `x -> -> # *U _fmt `i `x `ui -> 32 `ui < -> -> - -> *U *U + _fmt * -> -> 0 `i `x -> -> # *U _fmt `i `x `ui -> 9 `ui `uc `i -> 5 `i 31  ]
+{
+"1471
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1471:   do {
+[e :U 34 ]
+{
+"1472
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1472:    ++*fmt;
+[e =+ *U _fmt * -> -> 1 `i `x -> -> # *U *U _fmt `i `x ]
+"1473
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1473:   } while((((*fmt[0] == ' ') || ((unsigned char)((*fmt[0])-'\t') < 5))));
+}
+[e $ || == -> *U *U + _fmt * -> -> 0 `i `x -> -> # *U _fmt `i `x `ui -> 32 `ui < -> -> - -> *U *U + _fmt * -> -> 0 `i `x -> -> # *U _fmt `i `x `ui -> 9 `ui `uc `i -> 5 `i 34  ]
+[e :U 33 ]
+"1475
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1475:   while ((((c == ' ') || ((unsigned char)((c)-'\t') < 5)))) {
+[e $U 35  ]
+[e :U 36 ]
+{
+"1476
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1476:    ++nmatch;
+[e =+ _nmatch -> 1 `i ]
+"1477
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1477:    c = fgetc(fp);
+[e = _c ( _fgetc (1 _fp ]
+"1478
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1478:   }
+}
+[e :U 35 ]
+"1475
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1475:   while ((((c == ' ') || ((unsigned char)((c)-'\t') < 5)))) {
+[e $ || == -> _c `ui -> 32 `ui < -> -> - -> _c `ui -> 9 `ui `uc `i -> 5 `i 36  ]
+[e :U 37 ]
+"1479
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1479:   if (c != (-1)) {
+[e $ ! != _c -U -> 1 `i 38  ]
+{
+"1480
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1480:    ungetc(c, fp);
+[e ( _ungetc (2 , _c _fp ]
+"1481
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1481:   }
+}
+[e :U 38 ]
+"1482
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1482:  }
+}
+[e $U 39  ]
+"1483
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1483:  else if (c == *fmt[0]) {
+[e :U 31 ]
+[e $ ! == _c -> *U *U + _fmt * -> -> 0 `i `x -> -> # *U _fmt `i `x `i 40  ]
+{
+"1484
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1484:         ++*fmt;
+[e =+ *U _fmt * -> -> 1 `i `x -> -> # *U *U _fmt `i `x ]
+"1485
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1485:         ++nmatch;
+[e =+ _nmatch -> 1 `i ]
+"1486
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1486:     } else {
+}
+[e $U 41  ]
+[e :U 40 ]
+{
+"1487
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1487:   if (c == (-1)) {
+[e $ ! == _c -U -> 1 `i 42  ]
+{
+"1488
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1488:    return (-1);
+[e ) -U -> 1 `i ]
+[e $UE 21  ]
+"1489
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1489:   }
+}
+[e :U 42 ]
+"1490
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1490:         ungetc(c, fp);
+[e ( _ungetc (2 , _c _fp ]
+"1491
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1491:         return (-1) - 1;
+[e ) - -U -> 1 `i -> 1 `i ]
+[e $UE 21  ]
+"1492
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1492:     }
+}
+[e :U 41 ]
+[e :U 39 ]
+"1494
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1494:     return 0;
+[e ) -> 0 `i ]
+[e $UE 21  ]
+"1495
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1495: }
+[e :UE 21 ]
+}
+"1497
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1497: int vfscanf(FILE *fp, const char *fmt, va_list ap)
+[v _vfscanf `(i ~T0 @X0 1 ef3`*S1`*Cuc`**v ]
+"1498
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1498: {
+{
+[e :U _vfscanf ]
+"1497
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1497: int vfscanf(FILE *fp, const char *fmt, va_list ap)
+[v _fp `*S1 ~T0 @X0 1 r1 ]
+[v _fmt `*Cuc ~T0 @X0 1 r2 ]
+[v _ap `**v ~T0 @X0 1 r3 ]
+"1498
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1498: {
+[f ]
+"1499
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1499:     char *cfmt;
+[v _cfmt `*uc ~T0 @X0 1 a ]
+"1500
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1500:     int n, saved_errno;
+[v _n `i ~T0 @X0 1 a ]
+[v _saved_errno `i ~T0 @X0 1 a ]
+"1502
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1502:     cfmt = (char *)fmt;
+[e = _cfmt _fmt ]
+"1503
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1503:     ncnv = nmatch = 0;
+[e = _ncnv = _nmatch -> 0 `i ]
+"1504
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1504:  saved_errno = errno;
+[e = _saved_errno _errno ]
+"1505
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1505:     while (*cfmt) {
+[e $U 44  ]
+[e :U 45 ]
+{
+"1506
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1506:   errno = 0;
+[e = _errno -> 0 `i ]
+"1507
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1507:         n = vfsfcnvrt(fp, &cfmt, ap);
+[e = _n ( _vfsfcnvrt (3 , , _fp &U _cfmt _ap ]
+"1508
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1508:         if (n < 0) {
+[e $ ! < _n -> 0 `i 47  ]
+{
+"1509
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1509:             break;
+[e $U 46  ]
+"1510
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1510:         }
+}
+[e :U 47 ]
+"1511
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1511:         ncnv += n;
+[e =+ _ncnv _n ]
+"1512
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1512:     }
+}
+[e :U 44 ]
+"1505
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1505:     while (*cfmt) {
+[e $ != -> *U _cfmt `i -> 0 `i 45  ]
+[e :U 46 ]
+"1513
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1513:  errno = saved_errno;
+[e = _errno _saved_errno ]
+"1514
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1514:     if (n == (-1) && ncnv == 0) {
+[e $ ! && == _n -U -> 1 `i == _ncnv -> 0 `i 48  ]
+{
+"1515
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1515:         return n;
+[e ) _n ]
+[e $UE 43  ]
+"1516
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1516:     }
+}
+[e :U 48 ]
+"1518
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1518:     return ncnv;
+[e ) _ncnv ]
+[e $UE 43  ]
+"1519
+[; ;D:\App\mplab\pic\sources\c99\common\doscan.c: 1519: }
+[e :UE 43 ]
+}
+[a 1C 104 104 117 0 ]
+[a 2C 104 104 117 0 ]
+[a 3C 104 104 117 0 ]
+[a 4C 104 104 117 0 ]
+[a 5C 104 104 117 0 ]

@@ -1,0 +1,722 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"284 D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 284:     struct {
+[s S14 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S14 . RC0 RC1 RC2 RC3 RC4 RC5 RC6 RC7 ]
+"283
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 283: typedef union {
+[u S13 `S14 1 ]
+[n S13 . . ]
+"295
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 295: extern volatile PORTCbits_t PORTCbits __attribute__((address(0x007)));
+[v _PORTCbits `VS13 ~T0 @X0 0 e@7 ]
+"1443
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 1443:     struct {
+[s S62 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S62 . TRISC0 TRISC1 TRISC2 TRISC3 TRISC4 TRISC5 TRISC6 TRISC7 ]
+"1442
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 1442: typedef union {
+[u S61 `S62 1 ]
+[n S61 . . ]
+"1454
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 1454: extern volatile TRISCbits_t TRISCbits __attribute__((address(0x087)));
+[v _TRISCbits `VS61 ~T0 @X0 0 e@135 ]
+"1381
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 1381:     struct {
+[s S60 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S60 . TRISB0 TRISB1 TRISB2 TRISB3 TRISB4 TRISB5 TRISB6 TRISB7 ]
+"1380
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 1380: typedef union {
+[u S59 `S60 1 ]
+[n S59 . . ]
+"1392
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 1392: extern volatile TRISBbits_t TRISBbits __attribute__((address(0x086)));
+[v _TRISBbits `VS59 ~T0 @X0 0 e@134 ]
+"222
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 222:     struct {
+[s S12 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S12 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
+"221
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 221: typedef union {
+[u S11 `S12 1 ]
+[n S11 . . ]
+"233
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 233: extern volatile PORTBbits_t PORTBbits __attribute__((address(0x006)));
+[v _PORTBbits `VS11 ~T0 @X0 0 e@6 ]
+[v F164 `(v ~T0 @X0 1 tf1`ul ]
+"20 D:\App\mplab\pic\include/builtins.h
+[v __delay `JF164 ~T0 @X0 0 e ]
+[p i __delay ]
+"11 ./rfid.h
+[; ;./rfid.h: 11: uint8_t RFID_ToCard(uint8_t command, uint8_t* sendData, uint8_t sendLen, uint8_t* backData, uint16_t* backLen);
+[v _RFID_ToCard `(uc ~T0 @X0 0 ef5`uc`*uc`uc`*uc`*us ]
+"54 D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 54: __asm("INDF equ 00h");
+[; <" INDF equ 00h ;# ">
+"61
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 61: __asm("TMR0 equ 01h");
+[; <" TMR0 equ 01h ;# ">
+"68
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 68: __asm("PCL equ 02h");
+[; <" PCL equ 02h ;# ">
+"75
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 75: __asm("STATUS equ 03h");
+[; <" STATUS equ 03h ;# ">
+"161
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 161: __asm("FSR equ 04h");
+[; <" FSR equ 04h ;# ">
+"168
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 168: __asm("PORTA equ 05h");
+[; <" PORTA equ 05h ;# ">
+"218
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 218: __asm("PORTB equ 06h");
+[; <" PORTB equ 06h ;# ">
+"280
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 280: __asm("PORTC equ 07h");
+[; <" PORTC equ 07h ;# ">
+"342
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 342: __asm("PORTD equ 08h");
+[; <" PORTD equ 08h ;# ">
+"404
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 404: __asm("PORTE equ 09h");
+[; <" PORTE equ 09h ;# ">
+"436
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 436: __asm("PCLATH equ 0Ah");
+[; <" PCLATH equ 0Ah ;# ">
+"456
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 456: __asm("INTCON equ 0Bh");
+[; <" INTCON equ 0Bh ;# ">
+"534
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 534: __asm("PIR1 equ 0Ch");
+[; <" PIR1 equ 0Ch ;# ">
+"596
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 596: __asm("PIR2 equ 0Dh");
+[; <" PIR2 equ 0Dh ;# ">
+"636
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 636: __asm("TMR1 equ 0Eh");
+[; <" TMR1 equ 0Eh ;# ">
+"643
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 643: __asm("TMR1L equ 0Eh");
+[; <" TMR1L equ 0Eh ;# ">
+"650
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 650: __asm("TMR1H equ 0Fh");
+[; <" TMR1H equ 0Fh ;# ">
+"657
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 657: __asm("T1CON equ 010h");
+[; <" T1CON equ 010h ;# ">
+"732
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 732: __asm("TMR2 equ 011h");
+[; <" TMR2 equ 011h ;# ">
+"739
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 739: __asm("T2CON equ 012h");
+[; <" T2CON equ 012h ;# ">
+"810
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 810: __asm("SSPBUF equ 013h");
+[; <" SSPBUF equ 013h ;# ">
+"817
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 817: __asm("SSPCON equ 014h");
+[; <" SSPCON equ 014h ;# ">
+"887
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 887: __asm("CCPR1 equ 015h");
+[; <" CCPR1 equ 015h ;# ">
+"894
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 894: __asm("CCPR1L equ 015h");
+[; <" CCPR1L equ 015h ;# ">
+"901
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 901: __asm("CCPR1H equ 016h");
+[; <" CCPR1H equ 016h ;# ">
+"908
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 908: __asm("CCP1CON equ 017h");
+[; <" CCP1CON equ 017h ;# ">
+"966
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 966: __asm("RCSTA equ 018h");
+[; <" RCSTA equ 018h ;# ">
+"1061
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 1061: __asm("TXREG equ 019h");
+[; <" TXREG equ 019h ;# ">
+"1068
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 1068: __asm("RCREG equ 01Ah");
+[; <" RCREG equ 01Ah ;# ">
+"1075
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 1075: __asm("CCPR2 equ 01Bh");
+[; <" CCPR2 equ 01Bh ;# ">
+"1082
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 1082: __asm("CCPR2L equ 01Bh");
+[; <" CCPR2L equ 01Bh ;# ">
+"1089
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 1089: __asm("CCPR2H equ 01Ch");
+[; <" CCPR2H equ 01Ch ;# ">
+"1096
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 1096: __asm("CCP2CON equ 01Dh");
+[; <" CCP2CON equ 01Dh ;# ">
+"1154
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 1154: __asm("ADRESH equ 01Eh");
+[; <" ADRESH equ 01Eh ;# ">
+"1161
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 1161: __asm("ADCON0 equ 01Fh");
+[; <" ADCON0 equ 01Fh ;# ">
+"1257
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 1257: __asm("OPTION_REG equ 081h");
+[; <" OPTION_REG equ 081h ;# ">
+"1327
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 1327: __asm("TRISA equ 085h");
+[; <" TRISA equ 085h ;# ">
+"1377
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 1377: __asm("TRISB equ 086h");
+[; <" TRISB equ 086h ;# ">
+"1439
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 1439: __asm("TRISC equ 087h");
+[; <" TRISC equ 087h ;# ">
+"1501
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 1501: __asm("TRISD equ 088h");
+[; <" TRISD equ 088h ;# ">
+"1563
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 1563: __asm("TRISE equ 089h");
+[; <" TRISE equ 089h ;# ">
+"1620
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 1620: __asm("PIE1 equ 08Ch");
+[; <" PIE1 equ 08Ch ;# ">
+"1682
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 1682: __asm("PIE2 equ 08Dh");
+[; <" PIE2 equ 08Dh ;# ">
+"1722
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 1722: __asm("PCON equ 08Eh");
+[; <" PCON equ 08Eh ;# ">
+"1756
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 1756: __asm("SSPCON2 equ 091h");
+[; <" SSPCON2 equ 091h ;# ">
+"1818
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 1818: __asm("PR2 equ 092h");
+[; <" PR2 equ 092h ;# ">
+"1825
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 1825: __asm("SSPADD equ 093h");
+[; <" SSPADD equ 093h ;# ">
+"1832
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 1832: __asm("SSPSTAT equ 094h");
+[; <" SSPSTAT equ 094h ;# ">
+"2001
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 2001: __asm("TXSTA equ 098h");
+[; <" TXSTA equ 098h ;# ">
+"2082
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 2082: __asm("SPBRG equ 099h");
+[; <" SPBRG equ 099h ;# ">
+"2089
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 2089: __asm("CMCON equ 09Ch");
+[; <" CMCON equ 09Ch ;# ">
+"2159
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 2159: __asm("CVRCON equ 09Dh");
+[; <" CVRCON equ 09Dh ;# ">
+"2224
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 2224: __asm("ADRESL equ 09Eh");
+[; <" ADRESL equ 09Eh ;# ">
+"2231
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 2231: __asm("ADCON1 equ 09Fh");
+[; <" ADCON1 equ 09Fh ;# ">
+"2290
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 2290: __asm("EEDATA equ 010Ch");
+[; <" EEDATA equ 010Ch ;# ">
+"2297
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 2297: __asm("EEADR equ 010Dh");
+[; <" EEADR equ 010Dh ;# ">
+"2304
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 2304: __asm("EEDATH equ 010Eh");
+[; <" EEDATH equ 010Eh ;# ">
+"2311
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 2311: __asm("EEADRH equ 010Fh");
+[; <" EEADRH equ 010Fh ;# ">
+"2318
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 2318: __asm("EECON1 equ 018Ch");
+[; <" EECON1 equ 018Ch ;# ">
+"2363
+[; ;D:/App/mplab/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 2363: __asm("EECON2 equ 018Dh");
+[; <" EECON2 equ 018Dh ;# ">
+"6 rfid.c
+[; ;rfid.c: 6: void RFID_Write(uint8_t addr, uint8_t data) {
+[v _RFID_Write `(v ~T0 @X0 1 ef2`uc`uc ]
+{
+[e :U _RFID_Write ]
+[v _addr `uc ~T0 @X0 1 r1 ]
+[v _data `uc ~T0 @X0 1 r2 ]
+[f ]
+"7
+[; ;rfid.c: 7:     PORTCbits.RC0 = 0;
+[e = . . _PORTCbits 0 0 -> -> 0 `i `uc ]
+"10
+[; ;rfid.c: 10:     uint8_t address = (addr << 1) & 0x7E;
+[v _address `uc ~T0 @X0 1 a ]
+[e = _address -> & << -> _addr `i -> 1 `i -> 126 `i `uc ]
+"11
+[; ;rfid.c: 11:     for(uint8_t i = 0; i < 8; i++) {
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 8 `i 100  ]
+[e $U 101  ]
+[e :U 100 ]
+{
+"12
+[; ;rfid.c: 12:         PORTCbits.RC3 = 0;
+[e = . . _PORTCbits 0 3 -> -> 0 `i `uc ]
+"13
+[; ;rfid.c: 13:         PORTCbits.RC5 = (address & 0x80) ? 1 : 0;
+[e = . . _PORTCbits 0 5 -> ? != & -> _address `i -> 128 `i -> 0 `i : -> 1 `i -> 0 `i `uc ]
+"14
+[; ;rfid.c: 14:         address <<= 1;
+[e =<< _address -> -> 1 `i `uc ]
+"15
+[; ;rfid.c: 15:         PORTCbits.RC3 = 1;
+[e = . . _PORTCbits 0 3 -> -> 1 `i `uc ]
+"16
+[; ;rfid.c: 16:     }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 8 `i 100  ]
+[e :U 101 ]
+}
+"19
+[; ;rfid.c: 19:     for(uint8_t i = 0; i < 8; i++) {
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 8 `i 103  ]
+[e $U 104  ]
+[e :U 103 ]
+{
+"20
+[; ;rfid.c: 20:         PORTCbits.RC3 = 0;
+[e = . . _PORTCbits 0 3 -> -> 0 `i `uc ]
+"21
+[; ;rfid.c: 21:         PORTCbits.RC5 = (data & 0x80) ? 1 : 0;
+[e = . . _PORTCbits 0 5 -> ? != & -> _data `i -> 128 `i -> 0 `i : -> 1 `i -> 0 `i `uc ]
+"22
+[; ;rfid.c: 22:         data <<= 1;
+[e =<< _data -> -> 1 `i `uc ]
+"23
+[; ;rfid.c: 23:         PORTCbits.RC3 = 1;
+[e = . . _PORTCbits 0 3 -> -> 1 `i `uc ]
+"24
+[; ;rfid.c: 24:     }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 8 `i 103  ]
+[e :U 104 ]
+}
+"26
+[; ;rfid.c: 26:     PORTCbits.RC0 = 1;
+[e = . . _PORTCbits 0 0 -> -> 1 `i `uc ]
+"27
+[; ;rfid.c: 27: }
+[e :UE 99 ]
+}
+"30
+[; ;rfid.c: 30: uint8_t RFID_Read(uint8_t addr) {
+[v _RFID_Read `(uc ~T0 @X0 1 ef1`uc ]
+{
+[e :U _RFID_Read ]
+[v _addr `uc ~T0 @X0 1 r1 ]
+[f ]
+"31
+[; ;rfid.c: 31:     uint8_t data = 0;
+[v _data `uc ~T0 @X0 1 a ]
+[e = _data -> -> 0 `i `uc ]
+"32
+[; ;rfid.c: 32:     PORTCbits.RC0 = 0;
+[e = . . _PORTCbits 0 0 -> -> 0 `i `uc ]
+"35
+[; ;rfid.c: 35:     uint8_t address = ((addr << 1) & 0x7E) | 0x80;
+[v _address `uc ~T0 @X0 1 a ]
+[e = _address -> | & << -> _addr `i -> 1 `i -> 126 `i -> 128 `i `uc ]
+"36
+[; ;rfid.c: 36:     for(uint8_t i = 0; i < 8; i++) {
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 8 `i 107  ]
+[e $U 108  ]
+[e :U 107 ]
+{
+"37
+[; ;rfid.c: 37:         PORTCbits.RC3 = 0;
+[e = . . _PORTCbits 0 3 -> -> 0 `i `uc ]
+"38
+[; ;rfid.c: 38:         PORTCbits.RC5 = (address & 0x80) ? 1 : 0;
+[e = . . _PORTCbits 0 5 -> ? != & -> _address `i -> 128 `i -> 0 `i : -> 1 `i -> 0 `i `uc ]
+"39
+[; ;rfid.c: 39:         address <<= 1;
+[e =<< _address -> -> 1 `i `uc ]
+"40
+[; ;rfid.c: 40:         PORTCbits.RC3 = 1;
+[e = . . _PORTCbits 0 3 -> -> 1 `i `uc ]
+"41
+[; ;rfid.c: 41:     }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 8 `i 107  ]
+[e :U 108 ]
+}
+"44
+[; ;rfid.c: 44:     for(uint8_t i = 0; i < 8; i++) {
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 8 `i 110  ]
+[e $U 111  ]
+[e :U 110 ]
+{
+"45
+[; ;rfid.c: 45:         PORTCbits.RC3 = 0;
+[e = . . _PORTCbits 0 3 -> -> 0 `i `uc ]
+"46
+[; ;rfid.c: 46:         PORTCbits.RC3 = 1;
+[e = . . _PORTCbits 0 3 -> -> 1 `i `uc ]
+"47
+[; ;rfid.c: 47:         data <<= 1;
+[e =<< _data -> -> 1 `i `uc ]
+"48
+[; ;rfid.c: 48:         if(PORTCbits.RC4) data |= 1;
+[e $ ! != -> . . _PORTCbits 0 4 `i -> 0 `i 113  ]
+[e =| _data -> -> 1 `i `uc ]
+[e :U 113 ]
+"49
+[; ;rfid.c: 49:     }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 8 `i 110  ]
+[e :U 111 ]
+}
+"51
+[; ;rfid.c: 51:     PORTCbits.RC0 = 1;
+[e = . . _PORTCbits 0 0 -> -> 1 `i `uc ]
+"52
+[; ;rfid.c: 52:     return data;
+[e ) _data ]
+[e $UE 106  ]
+"53
+[; ;rfid.c: 53: }
+[e :UE 106 ]
+}
+"56
+[; ;rfid.c: 56: void RFID_Init(void) {
+[v _RFID_Init `(v ~T0 @X0 1 ef ]
+{
+[e :U _RFID_Init ]
+[f ]
+"58
+[; ;rfid.c: 58:     TRISCbits.TRISC0 = 0;
+[e = . . _TRISCbits 0 0 -> -> 0 `i `uc ]
+"59
+[; ;rfid.c: 59:     TRISCbits.TRISC3 = 0;
+[e = . . _TRISCbits 0 3 -> -> 0 `i `uc ]
+"60
+[; ;rfid.c: 60:     TRISCbits.TRISC5 = 0;
+[e = . . _TRISCbits 0 5 -> -> 0 `i `uc ]
+"61
+[; ;rfid.c: 61:     TRISCbits.TRISC4 = 1;
+[e = . . _TRISCbits 0 4 -> -> 1 `i `uc ]
+"62
+[; ;rfid.c: 62:     TRISBbits.TRISB3 = 0;
+[e = . . _TRISBbits 0 3 -> -> 0 `i `uc ]
+"65
+[; ;rfid.c: 65:     PORTBbits.RB3 = 0;
+[e = . . _PORTBbits 0 3 -> -> 0 `i `uc ]
+"66
+[; ;rfid.c: 66:     _delay((unsigned long)((10)*(20000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"67
+[; ;rfid.c: 67:     PORTBbits.RB3 = 1;
+[e = . . _PORTBbits 0 3 -> -> 1 `i `uc ]
+"68
+[; ;rfid.c: 68:     _delay((unsigned long)((10)*(20000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"71
+[; ;rfid.c: 71:     RFID_Write(0x01, 0x0F);
+[e ( _RFID_Write (2 , -> -> 1 `i `uc -> -> 15 `i `uc ]
+"72
+[; ;rfid.c: 72:     _delay((unsigned long)((10)*(20000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"75
+[; ;rfid.c: 75:     while(RFID_Read(0x01) & (1 << 4)) {
+[e $U 115  ]
+[e :U 116 ]
+{
+"76
+[; ;rfid.c: 76:         _delay((unsigned long)((1)*(20000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"77
+[; ;rfid.c: 77:     }
+}
+[e :U 115 ]
+"75
+[; ;rfid.c: 75:     while(RFID_Read(0x01) & (1 << 4)) {
+[e $ != & -> ( _RFID_Read (1 -> -> 1 `i `uc `i << -> 1 `i -> 4 `i -> 0 `i 116  ]
+[e :U 117 ]
+"80
+[; ;rfid.c: 80:     RFID_Write(0x2A, 0x8D);
+[e ( _RFID_Write (2 , -> -> 42 `i `uc -> -> 141 `i `uc ]
+"81
+[; ;rfid.c: 81:     RFID_Write(0x2B, 0x3E);
+[e ( _RFID_Write (2 , -> -> 43 `i `uc -> -> 62 `i `uc ]
+"82
+[; ;rfid.c: 82:     RFID_Write(0x2D, 30);
+[e ( _RFID_Write (2 , -> -> 45 `i `uc -> -> 30 `i `uc ]
+"83
+[; ;rfid.c: 83:     RFID_Write(0x2C, 0);
+[e ( _RFID_Write (2 , -> -> 44 `i `uc -> -> 0 `i `uc ]
+"85
+[; ;rfid.c: 85:     RFID_Write(0x15, 0x40);
+[e ( _RFID_Write (2 , -> -> 21 `i `uc -> -> 64 `i `uc ]
+"86
+[; ;rfid.c: 86:     RFID_Write(0x11, 0x3D);
+[e ( _RFID_Write (2 , -> -> 17 `i `uc -> -> 61 `i `uc ]
+"89
+[; ;rfid.c: 89:     RFID_Write(0x14, RFID_Read(0x14) | 0x03);
+[e ( _RFID_Write (2 , -> -> 20 `i `uc -> | -> ( _RFID_Read (1 -> -> 20 `i `uc `i -> 3 `i `uc ]
+"91
+[; ;rfid.c: 91:     _delay((unsigned long)((10)*(20000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"92
+[; ;rfid.c: 92: }
+[e :UE 114 ]
+}
+"95
+[; ;rfid.c: 95: uint8_t RFID_CheckCard(void) {
+[v _RFID_CheckCard `(uc ~T0 @X0 1 ef ]
+{
+[e :U _RFID_CheckCard ]
+[f ]
+"96
+[; ;rfid.c: 96:     uint8_t buffer[2];
+[v _buffer `uc ~T0 @X0 -> 2 `i a ]
+"97
+[; ;rfid.c: 97:     uint16_t backBits;
+[v _backBits `us ~T0 @X0 1 a ]
+"99
+[; ;rfid.c: 99:     RFID_Write(0x0D, 0x07);
+[e ( _RFID_Write (2 , -> -> 13 `i `uc -> -> 7 `i `uc ]
+"101
+[; ;rfid.c: 101:     buffer[0] = 0x26;
+[e = *U + &U _buffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _buffer `ui `ux -> -> 38 `i `uc ]
+"102
+[; ;rfid.c: 102:     uint8_t status = RFID_ToCard(0x0C, buffer, 1, buffer, &backBits);
+[v _status `uc ~T0 @X0 1 a ]
+[e = _status ( _RFID_ToCard (4 , , , , -> -> 12 `i `uc &U _buffer -> -> 1 `i `uc &U _buffer &U _backBits ]
+"104
+[; ;rfid.c: 104:     return (status == 0 && backBits == 0x10) ? 1 : 0;
+[e ) -> ? && == -> _status `i -> 0 `i == -> _backBits `ui -> -> 16 `i `ui : -> 1 `i -> 0 `i `uc ]
+[e $UE 118  ]
+"105
+[; ;rfid.c: 105: }
+[e :UE 118 ]
+}
+"108
+[; ;rfid.c: 108: uint8_t RFID_ToCard(uint8_t command, uint8_t* sendData, uint8_t sendLen, uint8_t* backData, uint16_t* backLen) {
+[v _RFID_ToCard `(uc ~T0 @X0 1 ef5`uc`*uc`uc`*uc`*us ]
+{
+[e :U _RFID_ToCard ]
+[v _command `uc ~T0 @X0 1 r1 ]
+[v _sendData `*uc ~T0 @X0 1 r2 ]
+[v _sendLen `uc ~T0 @X0 1 r3 ]
+[v _backData `*uc ~T0 @X0 1 r4 ]
+[v _backLen `*us ~T0 @X0 1 r5 ]
+[f ]
+"109
+[; ;rfid.c: 109:     uint8_t status = 1;
+[v _status `uc ~T0 @X0 1 a ]
+[e = _status -> -> 1 `i `uc ]
+"110
+[; ;rfid.c: 110:     uint8_t irqEn = 0x00;
+[v _irqEn `uc ~T0 @X0 1 a ]
+[e = _irqEn -> -> 0 `i `uc ]
+"111
+[; ;rfid.c: 111:     uint8_t waitIRq = 0x00;
+[v _waitIRq `uc ~T0 @X0 1 a ]
+[e = _waitIRq -> -> 0 `i `uc ]
+"112
+[; ;rfid.c: 112:     uint8_t lastBits;
+[v _lastBits `uc ~T0 @X0 1 a ]
+"113
+[; ;rfid.c: 113:     uint8_t n;
+[v _n `uc ~T0 @X0 1 a ]
+"114
+[; ;rfid.c: 114:     uint16_t i;
+[v _i `us ~T0 @X0 1 a ]
+"116
+[; ;rfid.c: 116:     if(command == 0x0C) {
+[e $ ! == -> _command `i -> 12 `i 120  ]
+{
+"117
+[; ;rfid.c: 117:         irqEn = 0x77;
+[e = _irqEn -> -> 119 `i `uc ]
+"118
+[; ;rfid.c: 118:         waitIRq = 0x30;
+[e = _waitIRq -> -> 48 `i `uc ]
+"119
+[; ;rfid.c: 119:     }
+}
+[e :U 120 ]
+"121
+[; ;rfid.c: 121:     RFID_Write(0x02, irqEn | 0x80);
+[e ( _RFID_Write (2 , -> -> 2 `i `uc -> | -> _irqEn `i -> 128 `i `uc ]
+"122
+[; ;rfid.c: 122:     RFID_Write(0x04, 0x7F);
+[e ( _RFID_Write (2 , -> -> 4 `i `uc -> -> 127 `i `uc ]
+"123
+[; ;rfid.c: 123:     RFID_Write(0x0A, 0x80);
+[e ( _RFID_Write (2 , -> -> 10 `i `uc -> -> 128 `i `uc ]
+"125
+[; ;rfid.c: 125:     RFID_Write(0x01, 0x00);
+[e ( _RFID_Write (2 , -> -> 1 `i `uc -> -> 0 `i `uc ]
+"128
+[; ;rfid.c: 128:     for(i = 0; i < sendLen; i++) {
+{
+[e = _i -> -> 0 `i `us ]
+[e $U 124  ]
+[e :U 121 ]
+{
+"129
+[; ;rfid.c: 129:         RFID_Write(0x09, sendData[i]);
+[e ( _RFID_Write (2 , -> -> 9 `i `uc *U + _sendData * -> _i `ux -> -> # *U _sendData `ui `ux ]
+"130
+[; ;rfid.c: 130:     }
+}
+[e ++ _i -> -> 1 `i `us ]
+[e :U 124 ]
+[e $ < -> _i `ui -> _sendLen `ui 121  ]
+[e :U 122 ]
+}
+"133
+[; ;rfid.c: 133:     RFID_Write(0x01, command);
+[e ( _RFID_Write (2 , -> -> 1 `i `uc _command ]
+"135
+[; ;rfid.c: 135:     if(command == 0x0C) {
+[e $ ! == -> _command `i -> 12 `i 125  ]
+{
+"136
+[; ;rfid.c: 136:         RFID_Write(0x0D, RFID_Read(0x0D) | 0x80);
+[e ( _RFID_Write (2 , -> -> 13 `i `uc -> | -> ( _RFID_Read (1 -> -> 13 `i `uc `i -> 128 `i `uc ]
+"137
+[; ;rfid.c: 137:     }
+}
+[e :U 125 ]
+"140
+[; ;rfid.c: 140:     i = 1000;
+[e = _i -> -> 1000 `i `us ]
+"141
+[; ;rfid.c: 141:     while(i > 0) {
+[e $U 126  ]
+[e :U 127 ]
+{
+"142
+[; ;rfid.c: 142:         n = RFID_Read(0x04);
+[e = _n ( _RFID_Read (1 -> -> 4 `i `uc ]
+"143
+[; ;rfid.c: 143:         if(n & waitIRq) break;
+[e $ ! != & -> _n `i -> _waitIRq `i -> 0 `i 129  ]
+[e $U 128  ]
+[e :U 129 ]
+"144
+[; ;rfid.c: 144:         if(n & 0x01) break;
+[e $ ! != & -> _n `i -> 1 `i -> 0 `i 130  ]
+[e $U 128  ]
+[e :U 130 ]
+"145
+[; ;rfid.c: 145:         i--;
+[e -- _i -> -> 1 `i `us ]
+"146
+[; ;rfid.c: 146:         _delay((unsigned long)((1)*(20000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"147
+[; ;rfid.c: 147:     }
+}
+[e :U 126 ]
+"141
+[; ;rfid.c: 141:     while(i > 0) {
+[e $ > -> _i `ui -> -> 0 `i `ui 127  ]
+[e :U 128 ]
+"149
+[; ;rfid.c: 149:     RFID_Write(0x0D, RFID_Read(0x0D) & ~0x80);
+[e ( _RFID_Write (2 , -> -> 13 `i `uc -> & -> ( _RFID_Read (1 -> -> 13 `i `uc `i ~ -> 128 `i `uc ]
+"151
+[; ;rfid.c: 151:     if(i > 0) {
+[e $ ! > -> _i `ui -> -> 0 `i `ui 131  ]
+{
+"152
+[; ;rfid.c: 152:         if(!(RFID_Read(0x06) & 0x1B)) {
+[e $ ! ! != & -> ( _RFID_Read (1 -> -> 6 `i `uc `i -> 27 `i -> 0 `i 132  ]
+{
+"153
+[; ;rfid.c: 153:             status = 0;
+[e = _status -> -> 0 `i `uc ]
+"155
+[; ;rfid.c: 155:             if(command == 0x0C) {
+[e $ ! == -> _command `i -> 12 `i 133  ]
+{
+"156
+[; ;rfid.c: 156:                 n = RFID_Read(0x0A);
+[e = _n ( _RFID_Read (1 -> -> 10 `i `uc ]
+"157
+[; ;rfid.c: 157:                 lastBits = RFID_Read(0x0C) & 0x07;
+[e = _lastBits -> & -> ( _RFID_Read (1 -> -> 12 `i `uc `i -> 7 `i `uc ]
+"159
+[; ;rfid.c: 159:                 if(lastBits) {
+[e $ ! != -> _lastBits `i -> 0 `i 134  ]
+{
+"160
+[; ;rfid.c: 160:                     *backLen = (n - 1) * 8 + lastBits;
+[e = *U _backLen -> + * - -> _n `i -> 1 `i -> 8 `i -> _lastBits `i `us ]
+"161
+[; ;rfid.c: 161:                 } else {
+}
+[e $U 135  ]
+[e :U 134 ]
+{
+"162
+[; ;rfid.c: 162:                     *backLen = n * 8;
+[e = *U _backLen -> * -> _n `i -> 8 `i `us ]
+"163
+[; ;rfid.c: 163:                 }
+}
+[e :U 135 ]
+"165
+[; ;rfid.c: 165:                 if(n > 16) n = 16;
+[e $ ! > -> _n `i -> 16 `i 136  ]
+[e = _n -> -> 16 `i `uc ]
+[e :U 136 ]
+"166
+[; ;rfid.c: 166:                 for(i = 0; i < n; i++) {
+{
+[e = _i -> -> 0 `i `us ]
+[e $U 140  ]
+[e :U 137 ]
+{
+"167
+[; ;rfid.c: 167:                     backData[i] = RFID_Read(0x09);
+[e = *U + _backData * -> _i `ux -> -> # *U _backData `ui `ux ( _RFID_Read (1 -> -> 9 `i `uc ]
+"168
+[; ;rfid.c: 168:                 }
+}
+[e ++ _i -> -> 1 `i `us ]
+[e :U 140 ]
+[e $ < -> _i `ui -> _n `ui 137  ]
+[e :U 138 ]
+}
+"169
+[; ;rfid.c: 169:             }
+}
+[e :U 133 ]
+"170
+[; ;rfid.c: 170:         }
+}
+[e :U 132 ]
+"171
+[; ;rfid.c: 171:     }
+}
+[e :U 131 ]
+"173
+[; ;rfid.c: 173:     return status;
+[e ) _status ]
+[e $UE 119  ]
+"174
+[; ;rfid.c: 174: }
+[e :UE 119 ]
+}
