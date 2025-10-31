@@ -7,7 +7,6 @@ void Servo1_Init(void) {
 }
 
 void Servo1_Open(void) {
-    // Góc 90 ?? - M? c?a
     SERVO1_PIN = 1;
     __delay_us(1500); // 1.5ms pulse
     SERVO1_PIN = 0;
@@ -29,7 +28,6 @@ void Servo2_Init(void) {
 }
 
 void Servo2_Open(void) {
-    // Góc 90 ?? - M? barrier
     SERVO2_PIN = 1;
     __delay_us(1500); // 1.5ms pulse
     SERVO2_PIN = 0;
@@ -37,7 +35,6 @@ void Servo2_Open(void) {
 }
 
 void Servo2_Close(void) {
-    // Góc 0 ?? - ?óng barrier
     SERVO2_PIN = 1;
     __delay_us(500);  // 0.5ms pulse
     SERVO2_PIN = 0;
